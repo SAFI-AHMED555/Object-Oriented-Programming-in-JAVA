@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Question12 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter the basic salary of Employer ");
+        double basicSalary = input.nextDouble();
+
+        double medicalAllowance = basicSalary * 0.2;
+        double teachingAllowance = 5000;
+        double convenceAllowance = basicSalary * 0.5;
+        double adhocAllowance = basicSalary * 0.35;
+
+        double sum1 = medicalAllowance + teachingAllowance + convenceAllowance + adhocAllowance;
+        System.out.println("After allowances, the gross salary is: " + sum1);
+		
+		double gpFund=0.1;
+		double gst=0.05;
+		double grpInsurence=1000;
+		
+		double sum2= gpFund + gst + grpInsurence;
+		double sum3=sum1-sum2;
+		
+		System.out.println("Net salary After taxes & Funds: " + sum3);
+    }
+}
